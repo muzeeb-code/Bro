@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NTS Careers</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+    header nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(to bottom, #63d8ff, #5f93f4);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+    .hero button {
+      background: white;
+      border: none;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .job-layout {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      align-items: flex-start;
+    }
+
+    .filter-sidebar {
+      width: 250px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      flex-shrink: 0;
+      text-align: left;
+    }
+
+    .filter-sidebar h3 {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .filter-sidebar input,
+    .filter-sidebar select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .apply-filters {
+      background: #ff4b8b;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      flex: 1;
+    }
+
+    .job-card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .job-card button {
+      background: #00aaff;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      margin-top: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  .culture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 2rem; /* space between boxes */
+  justify-items: center;
+  margin-top: 2rem;
+  padding: 0 2rem; /* horizontal spacing */
+}
+
+.culture-box {
+  background-color: #f0edf7;
+  height: 220px;
+  width: 100%; /* fits inside grid cell */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .culture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .culture-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.culture-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px; /* space between items */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+
+    .application-steps {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .step {
+      flex: 1 1 200px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .step-number {
+      background: #ff4b8b;
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta {
+      background: #009fe3;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .cta button {
+      margin-top: 1rem;
+      background: white;
+      color: #009fe3;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+    .culture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.culture-item {
+  background: #f0edf7;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120px;
+}
+
+.culture-item img {
+  max-width: 150%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+  </style>
+</head>
+<body>
+ <header>
+  <div style="display: flex; align-items: center;">
+    <img src="shared image.jpg" alt="Logo" style="height: 40px; width: auto; margin-right: 10px;" />
+    <strong>NTS Global</strong>
+  </div>
+  <nav style="display: flex; align-items: center;">
+    <a href="../NTS-Nihon-Website-Homepage--main/index.html">Home</a>
+    <a href="../About-Us-main/index.html">About Us</a>
+    <a href="../NTSserviceoverviewpage-main/service.html">Services</a>
+    <a href="../web-page-main/career.html">Careers</a>
+    <a href="../NTS-contact-Webpage-main/index.html">Contact</a>
+    <a href="../newblog-page-main/index.html">Blog</a>
+    <button onclick="location.href='../NTS-Design-main/index.php.html'" 
+      style="
+        margin-left: 660px;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: white;
+        font-size: 0.9rem;
+        cursor: pointer;
+  ">✔ <i class='bx bx-globe'></i> Multilingual
+  </button>
+  </nav>
+</header>
+
+
+  <section class="hero">
+    <h1>Shape the Future with NTS</h1>
+    <p>Join a team of innovators dedicated to building groundbreaking solutions that impact millions globally.</p>
+    <button><i class="fas fa-briefcase"></i> View Open Positions</button>
+    <button><i class="fas fa-users"></i> Explore Our Culture</button>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose NTS?</h2>
+    <p>We're more than just a workplace; we're a community of passionate individuals driving change.</p>
+  </section>
+
+  <section class="section">
+    <h2>Current Opportunities</h2>
+    <p>Explore our open positions and find your next career challenge.</p>
+
+    <div class="job-layout">
+      <div class="filter-sidebar">
+        <h3>Filter Jobs</h3>
+        <input type="text" placeholder="e.g., Software Engineer" />
+        <select>
+          <option>Select Location</option>
+          <option>Patna</option>
+          <option>Delhi</option>
+          <option>Tokyo</option>
+        </select>
+        <select>
+          <option>Select Type</option>
+          <option>Full-time</option>
+          <option>Part-time</option>
+        </select>
+        <select>
+          <option>Select Department</option>
+          <option>Engineering</option>
+          <option>Marketing</option>
+          <option>HR</option>
+        </select>
+        <button class="apply-filters">Apply Filters</button>
+      </div>
+
+      <div class="job-grid">
+        <div class="job-card">
+          <h3>Senior Software Engineer</h3>
+          <p>Patna, India - Full-time</p>
+          <p>Develop and maintain robust, scalable software solutions for our flagship products. Collaborate with cross-functional teams to deliever high-quality</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>UX/UI Designer</h3>
+          <p>Delhi, India - Full-time</p>
+          <p>Design intuitive and visuall appealing user interfaces for web and mobile applications Conduct user research, create wireframes,</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>Marketing Specialist</h3>
+          <p>Tokyo, Japan - Full-time</p>
+          <p>Drive digital marketing campaigns, manage social media, and analyze market trends to enhance brand visibility and lead generation. Develop</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>HR Business Partner</h3>
+          <p>Patna, India - Full-time</p>
+          <p>Provide strategic HR support to business units,focusing on talent acquisition, employee relations,and performance management Champion NTS</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>Data Scientist</h3>
+          <p>Delhi, India - Full-time</p>
+          <p>Extract insights from complex datasets to inform business strategies and product development Build predictive models. perform statistical</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>Product Manager</h3>
+          <p>Tokyo, Japan - Full-time</p>
+          <p>Define product vision, strateay, and roadmap for a key NTS vertical. Collaborate with engineering. design, and marketing teams to deliver innovative</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>Sales Executive</h3>
+          <p>Delhi, India - Full-time</p>
+          <p>ldentify and pursue new business opportunities, build strong client relationships, and achieve sales targets. Present NTS solutions to prospective</p>
+          <button>Apply Now</button>
+        </div>
+        <div class="job-card">
+          <h3>Cybersecurity Analyst</h3>
+          <p>Patna, India - Full-time</p>
+          <p>Monitor, detect, and respond to security threats. Implement and manage security systems,conduct vulnerability assessments, and ensure</p>
+          <button>Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Culture & Values</h2>
+    <p>At NTS, we foster an environment where innovation thrives, collaboration is key, and every voice is valued.</p>
+<div class="culture-container">
+  <div class="culture-box"><img src="..." alt="Culture 1"></div>
+  <div class="culture-box"><img src="..." alt="Culture 2"></div>
+  <div class="culture-box"><img src="..." alt="Culture 3"></div>
+  <div class="culture-box" style="flex-direction: column; text-align: center; padding: 1rem;">
+  <h3 style="margin-bottom: 0.5rem;">A Place to Thrive</h3>
+  <p style="font-size: 0.9rem; line-height: 1.4; color: #666;">
+    We believe in empowering our people to achieve their full potential. Our culture is built on trust, respect, and a shared passion for making a difference. Join us and discover a workplace that truly supports you.
+  </p>
+  <p style="color: #ff4b8b; margin-top: 0.5rem; font-weight: bold;">Read Our Mission &raquo;</p>
+</div>
+
+  <div class="culture-box"><img src="..." alt="Culture 5"></div>
+  <div class="culture-box"><img src="..." alt="Culture 6"></div>
+  <div class="culture-box"><img src="..." alt="Culture 7"></div>
+  <div class="culture-box"><img src="..." alt="Culture 8"></div>
+  <div class="culture-box"><img src="..." alt="Culture 9"></div>
+</div>
+
+  </section>
+
+  <section class="section" style="background: #fdf4f7;">
+    <h2>Our Application Process</h2>
+    <div class="application-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Apply Online</h4>
+        <p>Submit your application with resume and cover letter.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Initial Review</h4>
+        <p>Our HR team reviews your qualifications.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Interviews</h4>
+        <p>Technical and behavioral assessments.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Offer & Onboarding</h4>
+        <p>Receive offer, accept, and join the team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Make an Impact?</h2>
+    <p>Join NTS and be part of a team that's building the future. Your journey starts here.</p>
+    <button><i class="fas fa-briefcase"></i> View All Openings</button>
+  </section>
+</body>
+</html>

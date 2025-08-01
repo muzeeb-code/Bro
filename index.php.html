@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NTS Website Redesign</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">NTS Website Redesign</div>
+    <nav>
+      <a href="../NTS-Nihon-Website-Homepage--main/index.html">Home</a>
+      <a href="../About-Us-main/index.html">About Us</a>
+      <a href="../NTSserviceoverviewpage-main/service.html">Services</a>
+      <a href="../web-page-main/career.html">Careers</a>
+      <a href="../NTS-contact-Webpage-main/index.html">Contact</a>
+      <a href="../newblog-page-main/index.html">Blog</a>
+    </nav>
+  </header>
+
+  <section class="language-section">
+    <h1>Language & Regional Preferences</h1>
+    <p>Customize your experience with NTS Website Redesign in your preferred language and regional settings.</p>
+
+    <h2>Choose Your Preferred Language</h2>
+    <div class="languages">
+      <div class="language selected" onclick="selectLanguage(this)">English</div>
+      <div class="language" onclick="selectLanguage(this)">日本語</div>
+      <div class="language" onclick="selectLanguage(this)">हिन्दी</div>
+      <div class="language" onclick="selectLanguage(this)">Español</div>
+      <div class="language" onclick="selectLanguage(this)">Français</div>
+      <div class="language" onclick="selectLanguage(this)">Deutsch</div>
+    </div>
+
+    <h2>Font & Alignment Optimization Examples</h2>
+    <div class="examples">
+      <div class="example">
+        <h3>English</h3>
+        <p><strong>Global Connectivity for Seamless Experiences</strong><br>
+        Bridging cultures through seamless digital experiences...</p>
+      </div>
+      <div class="example">
+        <h3>日本語 (Japanese)</h3>
+        <p>シームレスな体験のためのグローバル接続性...</p>
+      </div>
+      <div class="example">
+        <h3>हिन्दी (Hindi)</h3>
+        <p>सभी भाषाओं में स्पष्टता और प्रभाव के लिए ...</p>
+      </div>
+    </div>
+
+    <form action="save-language.php" method="POST" class="default-language-form">
+      <label for="default-language">Set Your Default Language:</label>
+      <select id="default-language" name="language">
+        <option value="english">English</option>
+        <option value="japanese">日本語</option>
+        <option value="hindi">हिन्दी</option>
+        <option value="spanish">Español</option>
+        <option value="french">Français</option>
+        <option value="german">Deutsch</option>
+      </select>
+      <button type="submit">Save</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-newsletter">
+      <p>Stay updated with our latest news</p>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <p>© 2020 NTS Website Redesign</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

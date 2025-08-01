@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fb;
+}
+
+header {
+  background: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nts-logo {
+  height: 40px;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+.multilingual {
+  background: #efefef;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tick-on-top {
+  position: relative;
+  top: -5px;
+}
+
+.hero {
+  background: linear-gradient(to right, #f0f4f8, #e2eafc);
+  text-align: center;
+  padding: 70px 20px 50px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #202124;
+}
+
+.hero p {
+  color: #0567fa;
+  margin: 15px 0 25px;
+}
+
+.hero .info-icons span {
+  margin: 0 15px;
+  color: #007bff;
+  font-size: 15px;
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 20px;
+}
+
+.form-container, .office-container {
+  background: #e8f1fa;
+  padding: 25px;
+  margin: 15px;
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.help-section {
+  background: #eef2f7;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.help-section h2 {
+  margin-bottom: 40px;
+}
+
+.help-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.help-box {
+  background: white;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.help-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.help-box a {
+  color: #007bffe1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #f8f8f8;
+  color: #777;
+}
